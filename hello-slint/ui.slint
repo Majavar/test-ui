@@ -1,0 +1,18 @@
+import {Button, HorizontalBox, VerticalBox} from "std-widgets.slint";
+
+App := Window {
+    preferred-width: 400px;
+    preferred-height: 200px;
+
+    VerticalBox {
+        Text {
+            text: "Hello Slint";
+            horizontal-alignment: center;
+        }
+        button := Button {
+            text: "Quit";
+        }
+    }
+
+    callback button-pressed <=> button.clicked;
+}
